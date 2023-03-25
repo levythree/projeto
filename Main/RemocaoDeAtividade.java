@@ -23,22 +23,19 @@ public class RemocaoDeAtividade {
 
             try {
                 int opcao = Integer.parseInt(input.nextLine());
+                ValorInvalidoException.validarOpcao(opcao, Atividade.getListaDeAtividades().size() + 1);
 
-                try {
-                    ValorInvalidoException.validarOpcao(opcao, Atividade.getListaDeAtividades().size() + 1);
-
-                    if (opcao == Atividade.getListaDeAtividades().size() + 1) {
-                        break;
-                    }
-        
-                    else {
-                        Atividade.getListaDeAtividades().remove(opcao -1);
-                    }
+                if (opcao == Atividade.getListaDeAtividades().size() + 1) {
+                    break;
                 }
-
-                catch (ValorInvalidoException erro) {
-                    System.out.printf("----------------------------------------%n%s%n", erro);
+    
+                else {
+                    Atividade.getListaDeAtividades().remove(opcao -1);
                 }
+            }
+
+            catch (ValorInvalidoException erro) {
+                System.out.printf("----------------------------------------%n%s%n", erro);
             }
 
             catch (NumberFormatException erro) {

@@ -1,10 +1,10 @@
-package Projeto.Main;
+package Main;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
-import Projeto.Atividades.Atividade;
-import Projeto.Atividades.AtividadeDeTrabalho;
-import Projeto.Atividades.AtividadeFisica;
+import Atividades.Atividade;
+import Atividades.AtividadeDeTrabalho;
+import Atividades.AtividadeFisica;
 
 public class AtividadesCadastradas {
     public static void listarAtividades() {      

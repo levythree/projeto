@@ -1,7 +1,8 @@
-package Projeto.Main;
+package Main;
 
 import java.util.Scanner;
-import Projeto.Exceções.ValorInvalidoException;
+
+import Excecoes.ValorInvalidoException;
 
 public class Menu {
     public static void menu() {
@@ -46,7 +47,7 @@ public class Menu {
                 }
 
                 else if (opcao == 4) {
-                    AtualizacaoDeAtividade.atualizarAtividade();
+                    AtualizacaoDeAtividade.atualizarAtividadeMenu();
                 }
 
                 else if (opcao == 5) {

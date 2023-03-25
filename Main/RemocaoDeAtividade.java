@@ -1,8 +1,8 @@
-package Projeto.Main;
+package Main;
 
 import java.util.Scanner;
-import Projeto.Atividades.Atividade;
-import Projeto.Exceções.ValorInvalidoException;
+import Atividades.Atividade;
+import Excecoes.ValorInvalidoException;
 
 public class RemocaoDeAtividade {
     public static void removerAtividade() {

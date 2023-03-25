@@ -1,4 +1,4 @@
-package Projeto.Atividades;
+package Atividades;
 
 public class AtividadeDeLazer extends Atividade {
     public AtividadeDeLazer(String descricao, String dataDeRealizacao, int duracao, int satisfacao) {

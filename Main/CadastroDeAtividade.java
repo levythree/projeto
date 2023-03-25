@@ -1,12 +1,12 @@
-package Projeto.Main;
+package Main;
 
 import java.util.Scanner;
 
-import Projeto.Atividades.Atividade;
-import Projeto.Atividades.AtividadeDeLazer;
-import Projeto.Atividades.AtividadeDeTrabalho;
-import Projeto.Atividades.AtividadeFisica;
-import Projeto.Exceções.ValorInvalidoException;
+import Atividades.Atividade;
+import Atividades.AtividadeDeLazer;
+import Atividades.AtividadeDeTrabalho;
+import Atividades.AtividadeFisica;
+import Excecoes.ValorInvalidoException;
 
 public class CadastroDeAtividade {
     public static void cadastrarAtividade() {

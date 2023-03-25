@@ -1,6 +1,6 @@
-package Projeto.Atividades;
+package Atividades;
 
-import Projeto.Exceções.ValorInvalidoException;
+import Excecoes.ValorInvalidoException;
 
 public class AtividadeDeTrabalho extends Atividade {
     private int dificuldade;

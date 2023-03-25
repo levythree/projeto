@@ -1,8 +1,8 @@
-package Projeto.Atividades;
+package Atividades;
 
 import java.util.List;
-import Projeto.Exceções.ValorInvalidoException;
 import java.util.ArrayList;
+import Excecoes.ValorInvalidoException;
 import java.util.Date;
 import java.util.Calendar;
 import java.text.DateFormat;

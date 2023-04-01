@@ -8,8 +8,6 @@ public class AtividadeFisica extends Atividade {
     public AtividadeFisica(String descricao, String dataDeRealizacao, int duracao, int satisfacao, int intensidade) {
         super(descricao, dataDeRealizacao, duracao, satisfacao);
         setIntensidade(intensidade);
-
-        setTipo("atividadeFisica");
     }
 
     public void setIntensidade(int intensidade) {

@@ -8,8 +8,6 @@ public class AtividadeDeTrabalho extends Atividade {
     public AtividadeDeTrabalho(String descricao, String dataDeRealizacao, int duracao, int satisfacao, int dificuldade) {
         super(descricao, dataDeRealizacao, duracao, satisfacao);
         setDificuldade(dificuldade);
-
-        setTipo("atividadeDeTrabalho");
     }
 
     public void setDificuldade(int dificuldade) {

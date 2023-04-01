@@ -9,7 +9,6 @@ import java.text.DateFormat;
 
 public abstract class Atividade {
     // PROPRIEDADES
-    private String tipo;
     private String descricao;
     private String dataDeRealizacao;
     private int duracao;
@@ -28,14 +27,6 @@ public abstract class Atividade {
     }
 
     // GETTERS E SETTERS
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }

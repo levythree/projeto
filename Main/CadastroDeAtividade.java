@@ -68,7 +68,7 @@ public class CadastroDeAtividade {
                     }
                 
                     else if (opcao == 3) {
-                        System.out.printf("Informe a intensidade da atividade (2 parafraco, 3  paraintenso, 4 para vigoroso): ");
+                        System.out.printf("Informe a intensidade da atividade (2 para fraco, 3 para intenso, 4 para vigoroso): ");
                         int intensidade = Integer.parseInt(input.nextLine());
                         ValorInvalidoException.validarIntensidade(intensidade);
 

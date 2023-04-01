@@ -84,8 +84,6 @@ public class AtualizacaoDeAtividade {
         
                 ValorInvalidoException.validarOpcao(segundaOpcao, voltar);
     
-                System.out.printf("----------------------------------------%n");
-    
                 if (segundaOpcao == voltar) {
                     break;
                 }

@@ -43,7 +43,7 @@ public class Menu {
                 }
 
                 else if (opcao == 3) {
-                    ;
+                    PesquisaDeAtividade.pesquisarAtividade();
                 }
 
                 else if (opcao == 4) {

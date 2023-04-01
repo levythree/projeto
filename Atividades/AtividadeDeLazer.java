@@ -7,9 +7,17 @@ public class AtividadeDeLazer extends Atividade {
         setTipo("atividadeDeLazer");
     }
 
+    @Override
     public void calcularGastoDeEnergia() {
         setGastoDeEnergia(getDuracao() * 1);
 
         calcularBemEstar();
+    }
+
+    @Override
+    public void listar() {
+        super.listar();
+
+        listarGastoDeEnergiaEBemEstar();
     }
 }

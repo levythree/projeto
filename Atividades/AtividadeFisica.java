@@ -36,4 +36,13 @@ public class AtividadeFisica extends Atividade {
 
         calcularBemEstar();
     }
+
+    @Override
+    public void listar() {
+        super.listar();
+
+        System.out.printf("Intensidade: %s | ", getIntensidade());
+
+        listarGastoDeEnergiaEBemEstar();
+    }
 }

@@ -36,4 +36,13 @@ public class AtividadeDeTrabalho extends Atividade {
 
         calcularBemEstar();
     }
+
+    @Override
+    public void listar() {
+        super.listar();
+
+        System.out.printf("Dificuldade: %s | ", getDificuldade());
+
+        listarGastoDeEnergiaEBemEstar();
+    }
 }

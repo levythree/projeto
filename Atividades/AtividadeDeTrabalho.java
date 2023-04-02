@@ -1,11 +1,12 @@
 package Atividades;
 
+import java.util.Date;
 import Excecoes.ValorInvalidoException;
 
 public class AtividadeDeTrabalho extends Atividade {
     private int dificuldade;
 
-    public AtividadeDeTrabalho(String descricao, String dataDeRealizacao, int duracao, int satisfacao, int dificuldade) {
+    public AtividadeDeTrabalho(String descricao, Date dataDeRealizacao, int duracao, int satisfacao, int dificuldade) {
         super(descricao, dataDeRealizacao, duracao, satisfacao);
         setDificuldade(dificuldade);
     }

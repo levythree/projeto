@@ -4,13 +4,12 @@ import java.util.List;
 import java.util.ArrayList;
 import Excecoes.ValorInvalidoException;
 import java.util.Date;
-import java.util.Calendar;
-import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 public abstract class Atividade {
     // PROPRIEDADES
     private String descricao;
-    private String dataDeRealizacao;
+    private Date dataDeRealizacao;
     private int duracao;
     private int satisfacao;
     private int gastoDeEnergia;
@@ -19,7 +18,7 @@ public abstract class Atividade {
     private static List<Atividade> listaDeAtividades = new ArrayList<>();
 
     // CONSTRUTOR
-    public Atividade(String descricao, String dataDeRealizacao, int duracao, int satisfacao) {
+    public Atividade(String descricao, Date dataDeRealizacao, int duracao, int satisfacao) {
         setDescricao(descricao);
         setDataDeRealizacao(dataDeRealizacao);
         setSatisfacao(satisfacao);
@@ -35,11 +34,11 @@ public abstract class Atividade {
         return descricao;
     }
 
-    public void setDataDeRealizacao(String dataDeRealizacao) {
+    public void setDataDeRealizacao(Date dataDeRealizacao) {
         this.dataDeRealizacao = dataDeRealizacao;
     }
 
-    public String getDataDeRealizacao() {
+    public Date getDataDeRealizacao() {
         return dataDeRealizacao;
     }
     
@@ -106,8 +105,10 @@ public abstract class Atividade {
     }
 
     public void listar() {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
         System.out.printf("Descrição: %s | ", getDescricao());
-        System.out.printf("Data de realização: %s | ", getDataDeRealizacao());
+        System.out.printf("Data de realização: %s | ", simpleDateFormat.format(dataDeRealizacao));
         System.out.printf("Duração: %s | ", getDuracao());
         System.out.printf("Satisfação: %s | ", getSatisfacao());
     }

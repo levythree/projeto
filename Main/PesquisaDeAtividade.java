@@ -1,5 +1,8 @@
 package Main;
 
+import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 import Atividades.Atividade;
@@ -105,6 +108,33 @@ public class PesquisaDeAtividade {
     }
 
     public static void pesquisarAtividadePorData() {
+        Scanner input = new Scanner(System.in);
 
+        System.out.printf("""
+        ----------------------------------------
+                   PESQUISAR POR DATA           
+        ----------------------------------------
+        """);
+
+        try {
+            System.out.printf("Informe a data inicial: ");
+            Date dataInicial = new SimpleDateFormat("dd/MM/yyyy").parse(input.nextLine());
+
+            System.out.printf("Informe a data final: ");
+            Date dataFinal = new SimpleDateFormat("dd/MM/yyyy").parse(input.nextLine());
+
+            System.out.printf("----------------------------------------%n");
+
+            for (Atividade atividade : Atividade.getListaDeAtividades()) {
+                if (atividade.getDataDeRealizacao().compareTo(dataInicial) >= 0 &&
+                atividade.getDataDeRealizacao().compareTo(dataFinal) <= 0) {
+                    atividade.listar();
+                }
+            }
+        }
+
+        catch (ParseException erro) {
+            System.out.printf("----------------------------------------%n%s%n", erro);
+        }
     }
 }

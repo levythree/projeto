@@ -1,11 +1,12 @@
 package Atividades;
 
 import Excecoes.ValorInvalidoException;
+import java.util.Date;
 
 public class AtividadeFisica extends Atividade {
     private int intensidade;
 
-    public AtividadeFisica(String descricao, String dataDeRealizacao, int duracao, int satisfacao, int intensidade) {
+    public AtividadeFisica(String descricao, Date dataDeRealizacao, int duracao, int satisfacao, int intensidade) {
         super(descricao, dataDeRealizacao, duracao, satisfacao);
         setIntensidade(intensidade);
     }

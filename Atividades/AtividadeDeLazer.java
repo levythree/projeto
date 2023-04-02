@@ -1,7 +1,9 @@
 package Atividades;
 
+import java.util.Date;
+
 public class AtividadeDeLazer extends Atividade {
-    public AtividadeDeLazer(String descricao, String dataDeRealizacao, int duracao, int satisfacao) {
+    public AtividadeDeLazer(String descricao, Date dataDeRealizacao, int duracao, int satisfacao) {
         super(descricao, dataDeRealizacao, duracao, satisfacao);
     }
 

@@ -1,6 +1,9 @@
 package Main;
 
 import java.util.Scanner;
+import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import Atividades.Atividade;
 import Atividades.AtividadeDeLazer;
 import Atividades.AtividadeDeTrabalho;
@@ -96,9 +99,11 @@ public class AtualizacaoDeAtividade {
                 }
             
                 else if (segundaOpcao == 2) {
-                    System.out.printf("Informe a nova data de realização da atividade: ");
-                    String dataDeRealizacao = input.nextLine();
-                
+                    System.out.printf("Informe a nova data de realização da atividade (dd/MM/yyyy): ");
+                    String dataDeRealizacaoString = input.nextLine();
+                    
+                    Date dataDeRealizacao = new SimpleDateFormat("dd/MM/yyyy").parse(dataDeRealizacaoString); 
+
                     Atividade.getListaDeAtividades().get(opcao).setDataDeRealizacao(dataDeRealizacao);
                 }
             
@@ -136,6 +141,10 @@ public class AtualizacaoDeAtividade {
             }
 
             catch (ValorInvalidoException erro) {
+                System.out.printf("----------------------------------------%n%s%n", erro);
+            }
+
+            catch (ParseException erro) {
                 System.out.printf("----------------------------------------%n%s%n", erro);
             }
         }

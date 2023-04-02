@@ -1,6 +1,9 @@
 package Main;
 
 import java.util.Scanner;
+import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import Atividades.Atividade;
 import Atividades.AtividadeDeLazer;
@@ -40,8 +43,8 @@ public class CadastroDeAtividade {
                     System.out.printf("----------------------------------------%nInforme a descrição da atividade: ");
                     String descricao = input.nextLine();
     
-                    System.out.printf("Informe a data de realização da atividade: ");
-                    String dataDeRealizacao = input.nextLine();
+                    System.out.printf("Informe a data de realização da atividade (dd/MM/yyyy): ");
+                    Date dataDeRealizacao = new SimpleDateFormat("dd/MM/yyyy").parse(input.nextLine());
     
                     System.out.printf("Informe a duração da atividade (em minutos): ");
                     int duracao = Integer.parseInt(input.nextLine());
@@ -84,6 +87,10 @@ public class CadastroDeAtividade {
             }
 
             catch (NumberFormatException erro) {
+                System.out.printf("----------------------------------------%n%s%n", erro);
+            }
+            
+            catch (ParseException erro) {
                 System.out.printf("----------------------------------------%n%s%n", erro);
             }
         }

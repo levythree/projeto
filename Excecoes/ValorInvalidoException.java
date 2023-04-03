@@ -1,10 +1,16 @@
 package Excecoes;
 
+// aqui é a classe das exceções customizadas, porque alguns valores precisam estar dentro de um limite
+// por exemplo a satisfação, que pode ser somente 1 ou -1
 public class ValorInvalidoException extends Exception {
+    // construtor que tem uma mensagem de erro
+    // mensagem essa que vai mudar dependendo de qual exceção acontecer
     public ValorInvalidoException(String mensagemDeErro) {
         super(mensagemDeErro);
     }
 
+    // esse método validarOpcao() serve para checar se o número que o usuário informou representa uma opção válida no menu
+    // dependendo do menu, a opção de voltar será diferente, por isso esse método precisa também do valor da opção de voltar, que sempre será a última opção
     public static void validarOpcao(int opcao, int voltar) throws ValorInvalidoException {
         if (opcao < 1 || opcao > voltar) {
             throw new ValorInvalidoException("Por favor, informe uma opção válida.");

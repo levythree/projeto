@@ -6,7 +6,7 @@ import Excecoes.ValorInvalidoException;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
-public abstract class Atividade {
+public abstract class Atividade implements Comparable<Atividade> {
     // propriedades
     private String descricao;
     private Date dataDeRealizacao;
@@ -138,5 +138,11 @@ public abstract class Atividade {
     public void listarGastoDeEnergiaEBemEstar() {
         System.out.printf("Gasto de energia: %s | ", getGastoDeEnergia());
         System.out.printf("Bem-estar: %.2f%n", getBemEstar());
+    }
+
+    // pra comparar os gastos de energia
+    @Override
+    public int compareTo(Atividade outra) {
+        return this.getGastoDeEnergia() - outra.getGastoDeEnergia();
     }
 }

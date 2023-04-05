@@ -2,6 +2,10 @@ package Main;
 
 import java.util.Scanner;
 
+import Atividades.Atividade;
+
+import java.util.Collections;
+
 import Excecoes.ValorInvalidoException;
 
 public class Menu {

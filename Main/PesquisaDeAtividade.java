@@ -15,7 +15,6 @@ import Atividades.AtividadeFisica;
 import Excecoes.ValorInvalidoException;
 
 public class PesquisaDeAtividade {
-    // método principal, vai chamar os outros
     public static void pesquisarAtividade() {
         while (true) {
             Scanner input = new Scanner(System.in);
@@ -91,9 +90,6 @@ public class PesquisaDeAtividade {
 
                 System.out.printf("----------------------------------------%n");
 
-                // originalmente eu tinha criado uma propriedade chamada tipo, e, dentro dos construtores das classes tinha colocado, por exemplo, no construtor da classe AtividadeFisica, this.tipo = "atividadeFisica"
-                // então para saber se o tipo da atividade era física era só checar se o tipo dela era "atividadeFisica"
-                // mas aí eu descobri o instanceof, que elimina completamente a necessidade de uma propriedade de tipo
                 for (Atividade atividade : Atividade.getListaDeAtividades()) {
                     if (opcao == 1 && atividade instanceof AtividadeDeLazer) {
                         atividade.listar();
@@ -132,10 +128,6 @@ public class PesquisaDeAtividade {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
             int gastoDeEnergiaDoPeriodo = 0;
 
-            // inicialmente eu pretendia fazer a pesquisa por data com o usuário informando uma data exata, um mês e um ano ou somente um mês
-            // por exemplo: o usuário informaria 2023 e todas as atividades que possuem 2023 como ano seriam listadas
-            // mas o problema estava na pesquisa por semana, não fazia ideia de como determinar isso
-            // a solução de fazer o usuário informar uma data inicial e uma data final não só é bem mais fácil de fazer como até permite que o usuário tenha infinitas opções de procurar atividades por data
             System.out.printf("Informe a data inicial: ");
             Date dataInicial = simpleDateFormat.parse(input.nextLine());
 
@@ -144,7 +136,6 @@ public class PesquisaDeAtividade {
 
             System.out.printf("----------------------------------------%n");
 
-            // a classe Date já ter um método compareTo() implementado já ajuda demais também
             for (Atividade atividade : Atividade.getListaDeAtividades()) {
                 if (atividade.getDataDeRealizacao().compareTo(dataInicial) >= 0 &&
                 atividade.getDataDeRealizacao().compareTo(dataFinal) <= 0) {
@@ -162,17 +153,13 @@ public class PesquisaDeAtividade {
     }
 
     public static void listarAtividadesComMaiorGasto() {
-        // essa listaDeAtividadesCopia serve somente para a ordem da lista original não ser alterada
-        List<Atividade> listaDeAtividadesCopia = new ArrayList(Atividade.getListaDeAtividades());
+        List<Atividade> listaDeAtividadesCopia = new ArrayList<Atividade>(Atividade.getListaDeAtividades());
 
         Collections.sort(listaDeAtividadesCopia, Collections.reverseOrder());
 
         System.out.printf("----------------------------------------%n");
 
-        // a condição é i < listaDeAtividadesCopia.size() ao invés de i < 3 porque podem existir casos onde o usuário não cadastrou 3 ou mais atividades
-        // se o usuário só cadastrou 1 atividade e a condição é i < 3, o que aconteceria seria que o programa tentaria achar a index 1 da lista, sendo que a lista só vai até a index 0 (somente 1 elemento)
         for (int i = 0; i < listaDeAtividadesCopia.size(); i++) {
-            // e esse if com um break serve justamente para caso o usuário tenha cadastro mais de 3 atividades, não permitir que mais que 3 atividades sejam printadas
             if (i == 3) {
                 break;
             }

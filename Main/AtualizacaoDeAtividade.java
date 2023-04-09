@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+
 import Atividades.Atividade;
 import Atividades.AtividadeDeLazer;
 import Atividades.AtividadeDeTrabalho;

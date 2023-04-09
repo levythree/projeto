@@ -27,8 +27,6 @@ public class CadastroDeAtividade {
             ----------------------------------------
             """);
 
-            // o uso do Integer.parseInt(input.nextLine()) se dá por conta de um problema ao usar os métodos nextInt() e nextLine() em sequência
-            // portanto a solução encontrada foi utilizar o nextLine() e então transformar para um valor int
             System.out.printf("Escolha uma opção: ");
 
             try {

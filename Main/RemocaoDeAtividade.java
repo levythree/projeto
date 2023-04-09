@@ -17,7 +17,7 @@ public class RemocaoDeAtividade {
 
             AtividadesCadastradas.listarAtividades();
 
-            System.out.printf("[%s] - Voltar.%n", Atividade.getListaDeAtividades().size() + 1);
+            System.out.printf("[%s] - Voltar%n", Atividade.getListaDeAtividades().size() + 1);
 
             System.out.printf("----------------------------------------%nEscolha uma opção: ");
 

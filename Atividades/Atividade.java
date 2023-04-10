@@ -2,9 +2,10 @@ package Atividades;
 
 import java.util.List;
 import java.util.ArrayList;
-import Excecoes.ValorInvalidoException;
 import java.util.Date;
 import java.text.SimpleDateFormat;
+
+import Excecoes.ValorInvalidoException;
 
 public abstract class Atividade implements Comparable<Atividade> {
     private static List<Atividade> listaDeAtividades = new ArrayList<Atividade>();

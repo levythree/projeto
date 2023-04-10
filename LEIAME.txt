@@ -1,0 +1,7 @@
+Uso do Integer.parseInt(input.nextLine()) ao invés do input.nextInt(): https://www.geeksforgeeks.org/why-is-scanner-skipping-nextline-after-use-of-other-next-functions/
+Usando o SimpleDateFormat: https://www.digitalocean.com/community/tutorials/java-simpledateformat-java-date-format
+Operador instanceof: https://www.baeldung.com/java-instanceof
+Casting de tipo de objeto: https://www.baeldung.com/java-type-casting
+Exceções customizadas: https://www.baeldung.com/java-new-custom-exception
+Formatação de string: https://www.baeldung.com/java-printstream-printf
+Implementação da interface Comparable<>: https://beginnersbook.com/2017/08/comparable-interface-in-java-with-example/

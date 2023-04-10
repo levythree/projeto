@@ -140,6 +140,7 @@ public class PesquisaDeAtividade {
                 if (atividade.getDataDeRealizacao().compareTo(dataInicial) >= 0 &&
                 atividade.getDataDeRealizacao().compareTo(dataFinal) <= 0) {
                     atividade.listar();
+                    
                     gastoDeEnergiaDoPeriodo += atividade.getGastoDeEnergia();
                 }
             }
